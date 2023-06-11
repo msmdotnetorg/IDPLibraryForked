@@ -1,5 +1,7 @@
+
 using IDPLibrary.Entities.Options;
 using IDPLibrary.Entities.ValueObjects;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 
 /*** IDP Library Services ***/
 //var Keys = builder.Configuration.GetSection(JwksOptions.SectionKey).Get<Jwk[]>();
@@ -34,3 +37,4 @@ app.UseIDPLibraryEndpoints();
 
 
 app.Run();
+
